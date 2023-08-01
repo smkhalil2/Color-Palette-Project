@@ -33,3 +33,9 @@
     align-items: center;
     justify-content: flex-start;
 }
+
+.select-container {
+    margin-left: auto;
+    /* background-color: #eceff1; */
+    
+}

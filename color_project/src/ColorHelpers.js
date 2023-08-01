@@ -4,7 +4,7 @@ const levels = [50, 100, 200, 300, 400, 500, 600, 700, 800, 900];
 function generatePalette(starterPalette) {
     
     let newPalette = {
-        paletteName: starterPalette.name,
+        paletteName: starterPalette.paletteName,
         id: starterPalette.id, 
         emoji: starterPalette.emoji,
         colors: {}
@@ -23,7 +23,10 @@ function generatePalette(starterPalette) {
                 id: color.name.toLowerCase().replace(/ /g, "-"),
                 hex: scale[i],
                 rgb: chroma(scale[i]).css(),
-                rgba: chroma(scale[i]).css().replace("rgb", "rgba").replace(")", ",1.0)")
+                rgba: chroma(scale[i])
+                    .css()
+                    .replace("rgb", "rgba")
+                    .replace(")", ",1.0)")
             })
         }
 
