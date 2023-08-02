@@ -17,12 +17,12 @@ function ColorBox({ name, background, moreUrl, showFullPalette }) {
 
   return (
     <CopyToClipboard text={background} onCopy={changeCopyState}>
-      <div className={`ColorBox ${showFullPalette ? 'quarterHeight' : 'halfHeight'}`} style={{ background: background }}>
+      <div className={'ColorBox'} style={{ background: background }}>
         <div
           className={`copyOverlay ${copied && 'showCopyOverlay'}`}
           style={{ background: background }}
         />
-        <div className={`copyMessage ${copied && 'showCopyMessage'}`}>
+        <div className={`copyMessage ${copied && 'showCopyMessage'} ${isLightColor ? 'darkText' : 'lightText'}`}>
           <h1>copied!</h1>
           <p className={isLightColor ? 'darkText' : 'lightText'}>{background}</p>
         </div>

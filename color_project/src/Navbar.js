@@ -45,7 +45,7 @@ export default function Navbar(props) {
                                 border: '2px solid #4285F4',
                                 width: '13px', 
                                 height: '13px', 
-                                marginLeft: '-7px',
+                                marginLeft: '0px',
                                 marginTop: '-2px'
                             }}
                             trackStyle={{backgroundColor:'transparent'}}
